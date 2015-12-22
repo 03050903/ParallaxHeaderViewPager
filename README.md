@@ -20,7 +20,7 @@ something you need to do
            }
            
            
-     add listener callback in method setHeaderScroll
+     //add listener callback in method setHeaderScroll
           
      /**
      	 * Helper method which just calls scrollTo() in the correct scrolling
@@ -41,6 +41,7 @@ something you need to do
              // add pull callback
              mOnPullDistanceListener.onPullDistance(this,mCurrentMode,-value);
              
+             .....
              remainder omitted.
                   
    ```
