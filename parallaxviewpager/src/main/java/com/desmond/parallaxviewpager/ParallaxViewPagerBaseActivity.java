@@ -17,6 +17,7 @@ public abstract class ParallaxViewPagerBaseActivity extends AppCompatActivity im
 
     public static final String TAG = ParallaxViewPagerBaseActivity.class.getSimpleName();
 
+    //用于记住每次header 和 image滑动的位置
     protected static final String IMAGE_TRANSLATION_Y = "image_translation_y";
     protected static final String HEADER_TRANSLATION_Y = "header_translation_y";
 
@@ -29,8 +30,20 @@ public abstract class ParallaxViewPagerBaseActivity extends AppCompatActivity im
     protected int mMinHeaderTranslation;
     protected int mNumFragments;
 
+    /**
+     * 各种必备参数 mMinHeaderHeight 等
+     */
     protected abstract void initValues();
+
+    /**
+     * 头部滚动的回调
+     * @param scrollY 滚动的距离
+     */
     protected abstract void scrollHeader(int scrollY);
+
+    /**
+     * Adapter的设置
+     */
     protected abstract void setupAdapter();
 
     /**this method only works on listView with the same item height and without header

@@ -69,6 +69,7 @@ public class MainActivity extends ParallaxViewPagerBaseActivity {
     protected void scrollHeader(int scrollY) {
         float translationY = Math.max(-scrollY, mMinHeaderTranslation);
         mHeader.setTranslationY(translationY);
+        //TopImage反方向执行滑行距离的1/3
         mTopImage.setTranslationY(-translationY / 3);
     }
 
